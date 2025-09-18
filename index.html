@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reconocimiento y Recomendaciones de Prendas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Reconocimiento y Recomendaciones de Prendas</h1>
+    <p>Sube una imagen para detectar la prenda y ver sugerencias</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Subir imagen</h2>
+      <input type="file" id="fileInput" accept="image/*" />
+      <img id="preview" alt="Previsualización" style="display:none;" />
+
+      <div class="selectors">
+        <label>
+          Género:
+          <select id="genero">
+            <option value="varon">varón</option>
+            <option value="mujer">mujer</option>
+          </select>
+        </label>
+        <label>
+          Estilo:
+          <select id="estilo">
+            <option value="casual">casual</option>
+            <option value="urbano">urbano</option>
+            <option value="romántico">romántico</option>
+            <option value="vintage">vintage</option>
+            <option value="punk">punk</option>
+          </select>
+        </label>
+      </div>
+
+      <button id="btnAnalizar">Analizar y Recomendar</button>
+
+      <div id="resultado"></div>
+      <div id="recomendacionesTitulo"></div>
+      <ul id="recomendacionesLista"></ul>
+      <div id="recoImagenes" class="grid-imagenes"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>desde tensorflow</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
